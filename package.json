@@ -1,0 +1,20 @@
+{
+  "name": "ShoppingCart",
+  "version": "1.0.0",
+  "description": "A RESTful API that allows users to manage shopping cart",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "mongodb": "^2.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andri-ys/shopping-cart.git"
+  },
+  "license": "UNLICENSED"
+}
