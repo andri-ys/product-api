@@ -1,2 +1,2 @@
-# shopping-cart
+# product-api
 Product management API using Node.js + MongoDB
