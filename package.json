@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/andri-ys/shopping-cart.git"
+    "url": "https://github.com/andri-ys/product-api.git"
   },
   "license": "UNLICENSED",
   "devDependencies": {
