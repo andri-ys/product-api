@@ -50,6 +50,27 @@ describe("Product API unit test", function(){
     })
   });
   //
+  it("should be able to search product based on criteria", function(done){
+    server
+    .get("/api/product")
+    .send({ size: "34", color: "magenta", minPrice: 25, maxPrice: 25 })
+    .expect("Content-type", /json/)
+    .expect(200)
+    .end(function(err, res){
+      if (err){
+        throw err;
+      }
+      
+      var data = res.body;
+      
+      if (!data.find(e => e._id == _id)){
+        throw {message:"Data not found"};
+      }
+      
+      done();
+    });
+  });
+  //
   it("should be able to delete existing product", function(done){
     server
     .del("/api/product/" + _id)
@@ -63,7 +84,7 @@ describe("Product API unit test", function(){
     });
   });
   //
-  it("should return not found on non-existed product", function(done){
+  it("should return not found on deleted product", function(done){
     server
     .get("/api/product/" + _id)
     .expect(404)
