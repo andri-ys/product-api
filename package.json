@@ -1,8 +1,8 @@
 {
-  "name": "shopping-cart",
+  "name": "product-api",
   "version": "1.0.0",
   "private": true,
-  "description": "A RESTful API that allows users to manage shopping cart",
+  "description": "A RESTful API that allows users to manage product data",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,5 +17,10 @@
     "type": "git",
     "url": "https://github.com/andri-ys/shopping-cart.git"
   },
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "should": "^8.3.1",
+    "supertest": "^1.2.0"
+  }
 }

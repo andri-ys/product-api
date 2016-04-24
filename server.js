@@ -71,9 +71,11 @@ express()
     .get("/api/product/:id", function(req, res){
         productModel.findById(req.params.id, function(err, product){
             if (err){
-                handleError(res, err.message, "Get Product By Id", 404);
-            }else{
+                handleError(res, err.message, "Get Product By Id", 404);            
+            }else if (product){
                 res.status(200).json(product);
+            }else{
+                res.status(404).json({ message: "Not found" });
             }
         });
     })

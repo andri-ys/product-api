@@ -1,2 +1,2 @@
 # shopping-cart
-Shopping cart app using Node.js + MongoDB
+Product management API using Node.js + MongoDB
